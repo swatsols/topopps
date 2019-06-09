@@ -1,0 +1,46 @@
+.app {
+  height: 100%;
+  .header {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 66px;
+    &__logo {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      height: 100%;
+    }
+    &__actions {
+      height: 100%;
+      width: 325px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      i {
+        margin: 0px 10px 0px 10px;
+        font-size: 2rem;
+        color: #a4aab2;
+      }
+      &_account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pic {
+          margin-right: 4px;
+          font-size: 2.1rem;
+        }
+      }
+    }
+  }
+  .body {
+    .navigation {
+      height: 100%;
+      width: 120px;
+    }
+    .content {
+      width: 100%;
+    }
+  }
+}
