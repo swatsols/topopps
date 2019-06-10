@@ -6,11 +6,13 @@
     margin-right: auto;
     height: 66px;
     &__logo {
-      width: 200px;
-      display: flex;
       align-items: center;
-      font-size: 2rem;
       height: 100%;
+      background-image: url("/assets/images/topopps-logo.png");
+      background-repeat: no-repeat;
+      width: 196px;
+      background-position-y: center;
+      background-size: 151px;
     }
     &__actions {
       height: 100%;
