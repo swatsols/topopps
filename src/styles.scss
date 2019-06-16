@@ -9,3 +9,32 @@ body {
 .container-fluid {
   padding: 0px 20px;
 }
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #9dca3a;
+}
+
+.mat-form-field-underline {
+  display: none;
+}
+
+.mat-progress-bar-fill::after {
+  background-color: #9dca3a;
+}
+
+.mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
+  background-color: #ff6464;
+}
+
+.mat-progress-bar-buffer,
+.mat-progress-bar.mat-warn .mat-progress-bar-buffer {
+  background-color: #eaeef1;
+}
+
+.app-card {
+  border: 1px solid #d4d7dc;
+  border-radius: 3px;
+  background-color: #ffffff;
+  height: 100%;
+}

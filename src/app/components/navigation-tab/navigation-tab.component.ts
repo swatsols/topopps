@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input, Output } from "@angular/core";
+import { EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-navigation-tab",
@@ -7,13 +8,19 @@ import { Component, OnInit } from "@angular/core";
 })
 export class NavigationTabComponent implements OnInit {
   public chevronPosition = "63px";
+  @Input()
+  public tabItems;
   public selectedIndex = 0;
+
+  @Output()
+  public tabChange = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
 
-  updateTab($event, index: number) {
+  updateTab(tab, index: number) {
     this.selectedIndex = index;
     this.chevronPosition = 150 * index + 63 + "px";
+    this.tabChange.emit(tab);
   }
 }

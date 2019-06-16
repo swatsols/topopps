@@ -1,12 +1,7 @@
-<div class="nav-tab d-flex align-items-center">
-  <div class="d-flex flex-column justify-content-center align-items-center tab" (click)="updateTab($event, 0)">
-    <span [ngClass]="{'active': selectedIndex === 0}">FORECAST SUMMARY</span>
-  </div>
-  <div class=" d-flex flex-column justify-content-center align-items-center tab" (click)="updateTab($event, 1)">
-    <span [ngClass]="{'active': selectedIndex === 1}">FUTURE FORECAST</span>
-  </div>
-  <div class=" d-flex flex-column justify-content-center align-items-center tab" (click)="updateTab($event, 2)">
-    <span [ngClass]="{'active': selectedIndex === 2}">FORECAST WORKSHEET</span>
+<div class="nav-tab d-flex align-items-center" *ngIf="tabItems.length > 0">
+  <div *ngFor="let tab of tabItems; let i = index"
+    class="d-flex flex-column justify-content-center align-items-center tab" (click)="updateTab(tab, i)">
+    <span [ngClass]="{'active': selectedIndex === i}">{{tab.name}}</span>
   </div>
   <div class="chevron-up">
     <i class="material-icons" [ngStyle]="{'left': chevronPosition}">arrow_drop_up</i>

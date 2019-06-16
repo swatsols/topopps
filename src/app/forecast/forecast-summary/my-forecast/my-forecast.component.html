@@ -1,0 +1,197 @@
+<div class="myfc d-flex flex-column ">
+    <div class="myfc__row1 d-flex flex-row">
+        <div class="myfc__card card-trend d-flex flex-column" style="height: 235px;">
+            <label class="myfc__title">Trend Graph</label>
+
+            <div class="app-card" style="position:relative;">
+                <div style="position: absolute;
+                right: 0px;
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;">
+                    <mat-form-field style="height: 0px;width: 74px;font-size: 13px;">
+                        <mat-select [(value)]="selectedTimePeriod">
+                            <mat-option value="Q1-2019">
+                                Q1-2019
+                            </mat-option>
+                            <mat-option value="Q1-2019">
+                                Q2-2019
+                            </mat-option>
+                            <mat-option value="Q1-2019">
+                                Q3-2019
+                            </mat-option>
+                            <mat-option value="Q1-2019">
+                                Q4-2019
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div id="chart_div"></div>
+            </div>
+        </div>
+        <div class="myfc__card flex-grow-1 card-q1 d-flex flex-column" style="height: 235px;">
+            <label class="myfc__title">Q1 - 2019</label>
+            <div class="app-card d-flex  align-content-stretch flex-wrap">
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">FORECAST</span>
+                    <span class="value">$2,119,708</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">SELF REPORTING</span>
+                    <span class="value">$1,350,000</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">MNGR REPORTING</span>
+                    <span class="value">$2,410,000 <i class="material-icons edit-icon">edit</i></span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">ROLLUP</span>
+                    <span class="value">$2,410,000</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">QUOTA</span>
+                    <span class="value">$1,350,000</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">WON <i class="material-icons settings-icon">settings</i></span>
+                    <span class="value">$529,000</span>
+                    <span class="d-flex flex-row" style="height: 0px;margin-top: 2px;">
+                        <mat-progress-bar class="pull-left" class="won-progress" [color]="'primary'"
+                            [mode]="'determinate'" [value]="20" [bufferValue]="100">
+                        </mat-progress-bar>
+                        <span class="pull-left won-percent">20%</span>
+                    </span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">EXPECTED TO BE WON</span>
+                    <span class="value">$1,590,708</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">CATEGORY PIPELINE <i class="material-icons settings-icon">settings</i></span>
+                    <span class="value">$10,584,280</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">STAGE PIPELINE</span>
+                    <span class="value">$9,185,240</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">COMMIT</span>
+                    <span class="value">$2.5 M</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+                    <span class="title">MOST LIKELY</span>
+                    <span class="value">$1.6 M</span>
+                </div>
+                <div class="app-card__tab d-flex flex-column justify-content-center">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myfc__row2 d-flex flex-row">
+        <div class="myfc__card card-fc-calc d-flex flex-column">
+            <label class="myfc__title">Global Forecast Write-In Calculator</label>
+            <div class="app-card d-flex flex-column" style="height: 438px;">
+                <div style="height: 380px;overflow: auto;border-bottom: 1px solid #E4E4E5;">
+                    <table style=" height:80px; overflow:auto;" mat-table [dataSource]="dataSource">
+                        <ng-container matColumnDef="opportunityInfo">
+                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITY INFO</th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <span class="name">{{element.name}}</span>
+                                    <span class="stage">{{element.stage}}</span>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="forecast">
+                            <th mat-header-cell *matHeaderCellDef>FORECAST</th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div><span class="fc">{{element.foreCast}}</span></div>
+                                    <span class="fc__date">04/30/2019</span>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="oppAmount">
+                            <th mat-header-cell *matHeaderCellDef>OPP AMOUNT</th>
+                            <td mat-cell *matCellDef="let element"> {{element.oppAmount}}
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="customReporting">
+                            <th mat-header-cell *matHeaderCellDef>CUSTOM REPORTING</th>
+                            <td mat-cell *matCellDef="let element">
+                                <input type="text" [value]="element.customReporting" class="form-control repo-input">
+                            </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+                <div class="total-info flex-grow-1 d-flex justify-content-end align-items-center">
+                    <span style="color: #777777;font-size: 13px;">Self Write-In Total : </span>
+                    <span style="margin: 0px 10px 0px 17px;color: #222222;font-size: 14px;">$93,200</span>
+                </div>
+            </div>
+        </div>
+        <div class="myfc__card card-pipeline d-flex flex-column">
+            <label class="myfc__title">Pipeline Contribution</label>
+            <div class="app-card d-flex flex-column" style="height: 438px;">
+                <div style="height: 100%;overflow: auto;border-bottom: 1px solid #E4E4E5;">
+                    <table style=" height:100%;width: 100%; overflow:auto;" mat-table [dataSource]="dataSource1">
+                        <ng-container matColumnDef="category">
+                            <th mat-header-cell *matHeaderCellDef>CATEGORY</th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <span class="name">{{element.category}}</span>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="opportunities">
+                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITIES</th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <div>
+                                        <span class="fc">{{element.opportunities}}</span>
+                                        <span>
+                                            <button type="button" class="btn btn-link view-btn">View</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="amount">
+                            <th mat-header-cell *matHeaderCellDef>AMOUNT</th>
+                            <td mat-cell *matCellDef="let element">
+                                <span>{{element.amount}}</span>
+                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
+                                    <mat-progress-bar class="pipeline-progress" [color]="'primary'"
+                                        [mode]="'determinate'" [value]="element.amountPercent" [bufferValue]="100">
+                                    </mat-progress-bar>
+                                    <span
+                                        style="position: relative;top: -8px;left: 4px;">{{element.amountPercent}}%</span>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <ng-container matColumnDef="changesSince">
+                            <th mat-header-cell *matHeaderCellDef>CHANGES SINCE</th>
+                            <td mat-cell *matCellDef="let element">
+                                <span> {{element.changesSince}}</span>
+                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
+                                    <mat-progress-bar class="pipeline-progress" [color]="'primary'"
+                                        [mode]="'determinate'" [value]="element.changePercent" [bufferValue]="100">
+                                    </mat-progress-bar>
+                                    <span
+                                        style="position: relative;top: -8px;left: 4px;">{{element.changePercent}}%</span>
+                                </div>
+                            </td>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns1; sticky: true"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

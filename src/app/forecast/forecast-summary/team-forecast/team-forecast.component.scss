@@ -1,0 +1,96 @@
+.teamfc {
+  height: 100%;
+  margin-top: 20px;
+  &__actions {
+    &-select {
+      padding: 5px 10px;
+      border: 1px solid #d4d7dc;
+      padding-top: 12px;
+      background-color: #f8f8f9;
+    }
+    &-input {
+      padding: 5px 10px;
+      border: 1px solid #d4d7dc;
+      padding-top: 12px;
+      background-color: #f8f8f9;
+      .search-icon {
+        position: relative;
+        top: 6px;
+        left: -2px;
+      }
+    }
+    &-actions {
+      width: 150px;
+    }
+  }
+  &__data {
+    table {
+      width: 100%;
+      .mat-row {
+        height: 64px;
+        .mat-column-mngrReporting,
+        .mat-column-stagePipeline,
+        .mat-column-categoryPipeline,
+        .mat-column-commit,
+        .mat-column-bestCase,
+        .mat-column-mostLikely {
+          color: #5d9ed3;
+        }
+        .mat-column-name {
+          i {
+            font-size: 36px;
+            color: #d4d7dc;
+            padding-top: 5px;
+          }
+          .percent {
+            color: #222222;
+            font-size: 10px;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+    mat-progress-bar {
+      width: 100px;
+      border-radius: 4px;
+    }
+    .name_info {
+      margin-left: 5px;
+    }
+  }
+}
+
+.mat-form-field {
+  width: 125px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.reset {
+  color: #777777;
+  font-size: 15px;
+  span {
+    margin-left: 5px;
+  }
+}
+
+tr {
+  border: 1px solid #d4d7dc;
+}
+.mat-header-row {
+  background-color: #ededed;
+  height: 36px;
+  th {
+    height: 16px;
+    color: #2d2d2d;
+    font-size: 12px;
+  }
+  .mat-column-actions {
+    padding-top: 6px;
+    color: #2d2d2d;
+    font-size: 12px;
+  }
+  .mat-column-select {
+    padding-top: 10px;
+  }
+}

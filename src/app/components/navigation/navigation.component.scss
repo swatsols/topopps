@@ -6,6 +6,8 @@
   padding-top: 20px;
   overflow: hidden;
   .nav-item {
+    outline: none;
+
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -19,7 +21,7 @@
       font-size: 2.5rem;
     }
   }
-  .selected {
+  .active {
     border-radius: 3px 0 0 3px;
     background: #9dca3a;
     margin-left: 10px;
