@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 const ELEMENT_DATA = [
   {
+    index: 0,
     name: "Ethan Clark",
     forecast: "$2.1 M",
     selfReporting: "$1.3 M",
@@ -12,9 +13,11 @@ const ELEMENT_DATA = [
     commit: "$2.5 M",
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
-    percent: 50
+    percent: 50,
+    personImg: "person1"
   },
   {
+    index: 1,
     name: "Jessy Rose",
     forecast: "$1.88 M",
     selfReporting: "$1.0 M",
@@ -25,9 +28,11 @@ const ELEMENT_DATA = [
     commit: "$1.8 M",
     bestCase: "$2.1 M",
     mostLikely: "$1.3 M",
-    percent: 30
+    percent: 30,
+    personImg: "person2"
   },
   {
+    index: 2,
     name: "Willy James",
     forecast: "$2.3 M",
     selfReporting: "$2.1 M",
@@ -38,9 +43,11 @@ const ELEMENT_DATA = [
     commit: "$2.0 M",
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
-    percent: 10
+    percent: 10,
+    personImg: "person3"
   },
   {
+    index: 3,
     name: "Mc Grith",
     forecast: "$2.1 M",
     selfReporting: "$1.3 M",
@@ -51,9 +58,11 @@ const ELEMENT_DATA = [
     commit: "$2.5 M",
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
-    percent: 50
+    percent: 50,
+    personImg: "person1"
   },
   {
+    index: 4,
     name: "Ethan Clark",
     forecast: "$1.88 M",
     selfReporting: "$1.0 M",
@@ -64,9 +73,11 @@ const ELEMENT_DATA = [
     commit: "$1.8 M",
     bestCase: "$2.1 M",
     mostLikely: "$1.3 M",
-    percent: 30
+    percent: 30,
+    personImg: "person3"
   },
   {
+    index: 5,
     name: "Jessy Rose",
     forecast: "$2.3 M",
     selfReporting: "$2.1 M",
@@ -77,9 +88,11 @@ const ELEMENT_DATA = [
     commit: "$2.0 M",
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
-    percent: 20
+    percent: 20,
+    personImg: "person2"
   },
   {
+    index: 6,
     name: "Willy James",
     forecast: "$2.3 M",
     selfReporting: "$2.1 M",
@@ -90,9 +103,11 @@ const ELEMENT_DATA = [
     commit: "$2.0 M",
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
-    percent: 50
+    percent: 50,
+    personImg: "person1"
   },
   {
+    index: 7,
     name: "Mc Grith",
     forecast: "$2.1 M",
     selfReporting: "$1.3 M",
@@ -103,7 +118,8 @@ const ELEMENT_DATA = [
     commit: "$2.5 M",
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
-    percent: 10
+    percent: 10,
+    personImg: "person3"
   }
 ];
 
@@ -114,6 +130,8 @@ const ELEMENT_DATA = [
 })
 export class TeamForecastComponent implements OnInit {
   public selectedTimePeriod = "Q1-2019";
+  public selectedRowIndex = -1;
+  public showPopup = false;
   displayedColumns: string[] = [
     "name",
     "forecast",
@@ -127,18 +145,28 @@ export class TeamForecastComponent implements OnInit {
     "mostLikely"
   ];
   public columnInfo = [
-    { key: "forecast", label: "FORECAST" },
-    { key: "selfReporting", label: "SELF REPORTING" },
-    { key: "mngrReporting", label: "MNGR REPORTING" },
-    { key: "won", label: "WON" },
-    { key: "stagePipeline", label: "STAGE PIPELINE" },
-    { key: "categoryPipeline", label: "CATEGORY PIPELINE" },
-    { key: "commit", label: "COMMMIT" },
-    { key: "bestCase", label: "BEST CASE" },
-    { key: "mostLikely", label: "MOST LIKELY" }
+    { key: "forecast", label: "Forecast" },
+    { key: "selfReporting", label: "Self Reporting" },
+    { key: "mngrReporting", label: "Mngr Reporting" },
+    { key: "won", label: "Won" },
+    { key: "stagePipeline", label: "Stage Pipeline" },
+    { key: "categoryPipeline", label: "Category Pipeline" },
+    { key: "commit", label: "Commit" },
+    { key: "bestCase", label: "Best Case" },
+    { key: "mostLikely", label: "Most Likely" }
   ];
   dataSource = ELEMENT_DATA;
   constructor() {}
 
   ngOnInit() {}
+
+  onEdit(data) {
+    this.selectedRowIndex = data.index;
+    this.showPopup = true;
+  }
+
+  closePopup() {
+    this.showPopup = false;
+    this.selectedRowIndex = -1;
+  }
 }

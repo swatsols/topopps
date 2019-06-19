@@ -35,29 +35,29 @@
             <label class="myfc__title">Q1 - 2019</label>
             <div class="app-card d-flex  align-content-stretch flex-wrap">
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">FORECAST</span>
+                    <span class="title">Forecast</span>
                     <span class="value">$2,119,708</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">SELF REPORTING</span>
+                    <span class="title">Self Reporting</span>
                     <span class="value">$1,350,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">MNGR REPORTING</span>
+                    <span class="title">Mngr Reporting</span>
                     <span class="value">$2,410,000 <i class="material-icons edit-icon">edit</i></span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">ROLLUP</span>
+                    <span class="title">Rollup</span>
                     <span class="value">$2,410,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">QUOTA</span>
+                    <span class="title">Quota</span>
                     <span class="value">$1,350,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">WON <i class="material-icons settings-icon">settings</i></span>
+                    <span class="title">Won <i class="material-icons settings-icon">settings</i></span>
                     <span class="value">$529,000</span>
-                    <span class="d-flex flex-row" style="height: 0px;margin-top: 2px;">
+                    <span class="d-flex flex-row" style="height: 0px;margin-top: 5px;">
                         <mat-progress-bar class="pull-left" class="won-progress" [color]="'primary'"
                             [mode]="'determinate'" [value]="20" [bufferValue]="100">
                         </mat-progress-bar>
@@ -65,23 +65,23 @@
                     </span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">EXPECTED TO BE WON</span>
+                    <span class="title">Expected to be won</span>
                     <span class="value">$1,590,708</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">CATEGORY PIPELINE <i class="material-icons settings-icon">settings</i></span>
+                    <span class="title">Category Pipeline <i class="material-icons settings-icon">settings</i></span>
                     <span class="value">$10,584,280</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">STAGE PIPELINE</span>
+                    <span class="title">Stage Pipeline</span>
                     <span class="value">$9,185,240</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">COMMIT</span>
+                    <span class="title">Commit</span>
                     <span class="value">$2.5 M</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">MOST LIKELY</span>
+                    <span class="title">Most Likely</span>
                     <span class="value">$1.6 M</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
@@ -95,9 +95,9 @@
             <label class="myfc__title">Global Forecast Write-In Calculator</label>
             <div class="app-card d-flex flex-column" style="height: 438px;">
                 <div style="height: 380px;overflow: auto;border-bottom: 1px solid #E4E4E5;">
-                    <table style=" height:80px; overflow:auto;" mat-table [dataSource]="dataSource">
+                    <table style="overflow:auto;" mat-table [dataSource]="dataSource">
                         <ng-container matColumnDef="opportunityInfo">
-                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITY INFO</th>
+                            <th mat-header-cell *matHeaderCellDef>Opportunity Info</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="name">{{element.name}}</span>
@@ -106,7 +106,7 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="forecast">
-                            <th mat-header-cell *matHeaderCellDef>FORECAST</th>
+                            <th mat-header-cell *matHeaderCellDef>Forecast</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <div><span class="fc">{{element.foreCast}}</span></div>
@@ -115,12 +115,12 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="oppAmount">
-                            <th mat-header-cell *matHeaderCellDef>OPP AMOUNT</th>
+                            <th mat-header-cell *matHeaderCellDef>OPP Amount</th>
                             <td mat-cell *matCellDef="let element"> {{element.oppAmount}}
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="customReporting">
-                            <th mat-header-cell *matHeaderCellDef>CUSTOM REPORTING</th>
+                            <th mat-header-cell *matHeaderCellDef>Custom Reporting</th>
                             <td mat-cell *matCellDef="let element">
                                 <input type="text" [value]="element.customReporting" class="form-control repo-input">
                             </td>
@@ -139,9 +139,9 @@
             <label class="myfc__title">Pipeline Contribution</label>
             <div class="app-card d-flex flex-column" style="height: 438px;">
                 <div style="height: 100%;overflow: auto;border-bottom: 1px solid #E4E4E5;">
-                    <table style=" height:100%;width: 100%; overflow:auto;" mat-table [dataSource]="dataSource1">
+                    <table style="width: 100%; overflow:auto;" mat-table [dataSource]="dataSource1">
                         <ng-container matColumnDef="category">
-                            <th mat-header-cell *matHeaderCellDef>CATEGORY</th>
+                            <th mat-header-cell *matHeaderCellDef>Category</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="name">{{element.category}}</span>
@@ -149,7 +149,7 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="opportunities">
-                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITIES</th>
+                            <th mat-header-cell *matHeaderCellDef>Opportunities</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <div>
@@ -162,28 +162,28 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="amount">
-                            <th mat-header-cell *matHeaderCellDef>AMOUNT</th>
+                            <th mat-header-cell *matHeaderCellDef>Amount</th>
                             <td mat-cell *matCellDef="let element">
                                 <span>{{element.amount}}</span>
-                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
+                                <div class="d-flex flex-row justify-content-end" style="height: 0%;margin-top: 5px;">
                                     <mat-progress-bar class="pipeline-progress" [color]="'primary'"
                                         [mode]="'determinate'" [value]="element.amountPercent" [bufferValue]="100">
                                     </mat-progress-bar>
-                                    <span
-                                        style="position: relative;top: -8px;left: 4px;">{{element.amountPercent}}%</span>
+                                    <span style="position: relative;top: -8px;left: 4px;color: #777777;
+                                        font-size: 10px;">{{element.amountPercent}}%</span>
                                 </div>
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="changesSince">
-                            <th mat-header-cell *matHeaderCellDef>CHANGES SINCE</th>
+                            <th mat-header-cell *matHeaderCellDef>Changes Since</th>
                             <td mat-cell *matCellDef="let element">
                                 <span> {{element.changesSince}}</span>
-                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
+                                <div class="d-flex flex-row justify-content-end" style="height: 0%;margin-top: 5px;">
                                     <mat-progress-bar class="pipeline-progress" [color]="'primary'"
                                         [mode]="'determinate'" [value]="element.changePercent" [bufferValue]="100">
                                     </mat-progress-bar>
-                                    <span
-                                        style="position: relative;top: -8px;left: 4px;">{{element.changePercent}}%</span>
+                                    <span style="position: relative;top: -8px;left: 4px;color: #777777;
+                                        font-size: 10px;">{{element.changePercent}}%</span>
                                 </div>
                             </td>
                         </ng-container>

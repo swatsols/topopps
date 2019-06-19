@@ -2,12 +2,12 @@
   <app-navigation-tab [tabItems]="tabItems" (tabChange)="onTabChange($event)"></app-navigation-tab>
 
   <div class="fc__body flex-grow-1">
-    <app-forecast-summary *ngIf="selectedTab === 'FORECAST SUMMARY'"></app-forecast-summary>
-    <app-future-forecast *ngIf="selectedTab === 'FUTURE FORECAST'"></app-future-forecast>
-    <app-forecast-worksheet *ngIf="selectedTab === 'FORECAST WORKSHEET'"></app-forecast-worksheet>
-    <div class="forecase-info d-flex align-items-center">
+    <app-forecast-summary *ngIf="selectedTab === 'Forecast Summary'"></app-forecast-summary>
+    <app-future-forecast *ngIf="selectedTab === 'Future Forecast'"></app-future-forecast>
+    <app-forecast-worksheet *ngIf="selectedTab === 'Forecast Worksheet'"></app-forecast-worksheet>
+    <!-- <div class="forecase-info d-flex align-items-center">
       <span>Last snapshot on 15, March 2019</span>
       <button class="btn">Forecast Snapshot</button>
-    </div>
+    </div> -->
   </div>
 </div>

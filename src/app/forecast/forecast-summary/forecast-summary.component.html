@@ -1,10 +1,14 @@
 <div class="fsum">
-  <mat-tab-group [dynamicHeight]="true">
+  <mat-tab-group [dynamicHeight]="true" (selectedTabChange)="tabChanged($event)">
     <mat-tab label="My Forecast">
       <app-my-forecast></app-my-forecast>
     </mat-tab>
-    <mat-tab label="Team Forecast" isActive="true">
+    <mat-tab label="Team Forecast">
       <app-team-forecast></app-team-forecast>
     </mat-tab>
   </mat-tab-group>
+  <div class="forecase-info d-flex align-items-center" *ngIf="selectedIndex === 0">
+    <span>Last snapshot on 15, March 2019</span>
+    <button class="btn">Forecast Snapshot</button>
+  </div>
 </div>

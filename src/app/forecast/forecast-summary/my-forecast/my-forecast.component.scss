@@ -1,10 +1,11 @@
 .myfc {
-  margin-top: 30px;
+  margin-top: 10px;
   &__row1 {
-    height: 210px;
+    height: 230px;
     margin-bottom: 30px;
     .card-q1 {
       margin-left: 20px;
+      width: 50%;
     }
   }
   &__row2 {
@@ -15,7 +16,7 @@
       table {
         width: 100%;
         .mat-row {
-          height: 64px;
+          height: 60px;
           .mat-column-mngrReporting,
           .mat-column-stagePipeline,
           .mat-column-categoryPipeline,
@@ -37,6 +38,12 @@
             }
           }
         }
+        .mat-row:last-child {
+          border: none;
+          td {
+            border: none;
+          }
+        }
       }
     }
     .card-pipeline {
@@ -53,7 +60,7 @@
 
       .title {
         color: #777777;
-        font-size: 10px;
+        font-size: 12px;
       }
       .value {
         color: #000000;
@@ -68,7 +75,7 @@
     line-height: 24px;
   }
   .card-trend {
-    width: 40%;
+    width: 50%;
     height: 100%;
   }
 }
@@ -102,7 +109,7 @@
 }
 
 tr {
-  border: 1px solid #d4d7dc;
+  border-bottom: 1px solid #d4d7dc;
 }
 .mat-header-row {
   background-color: #ededed;
@@ -136,6 +143,7 @@ tr {
 }
 
 .mat-column-forecast {
+  width: 75px;
   .fc {
     background-color: #64c3d1;
     padding: 2px 4px 2px 4px;
@@ -150,7 +158,7 @@ tr {
 }
 
 .repo-input {
-  width: 150px;
+  width: 90px;
   color: #222222;
   font-size: 13px;
 }
@@ -171,4 +179,23 @@ tr {
 
 .pipeline-progress {
   width: 80px;
+}
+
+.mat-row {
+  height: 60px;
+}
+
+.mat-column-oppAmount,
+.mat-column-opportunities,
+.mat-column-amount,
+.mat-column-changesSince {
+  text-align: right !important;
+}
+
+.mat-column-customReporting {
+  padding-left: 15px;
+  width: 150px;
+  input {
+    width: 100%;
+  }
 }

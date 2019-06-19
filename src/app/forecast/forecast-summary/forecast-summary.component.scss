@@ -1,3 +1,19 @@
 .fsum {
   height: 100%;
+  .forecase-info {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    span {
+      margin-right: 10px;
+      color: #222222;
+      font-size: 12px;
+    }
+    button {
+      border-radius: 3px;
+      background-color: #9dca3a;
+      font-size: 13px;
+      color: #ffffff;
+    }
+  }
 }

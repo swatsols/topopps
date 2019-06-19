@@ -30,6 +30,8 @@ import {
   MatTableModule,
   MatProgressBarModule
 } from "@angular/material";
+import { ProfileSummaryComponent } from './forecast/forecast-summary/team-forecast/profile-summary/profile-summary.component';
+import { OpportunitiesComponent } from './forecast/forecast-summary/team-forecast/opportunities/opportunities.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import {
     FutureForecastComponent,
     ForecastWorksheetComponent,
     MyForecaseComponent,
-    TeamForecastComponent
+    TeamForecastComponent,
+    ProfileSummaryComponent,
+    OpportunitiesComponent
   ],
   imports: [
     BrowserModule,

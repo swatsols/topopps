@@ -27,7 +27,11 @@
     table {
       width: 100%;
       .mat-row {
-        height: 64px;
+        height: 60px;
+
+        .mat-column-name {
+          text-align: left;
+        }
         .mat-column-mngrReporting,
         .mat-column-stagePipeline,
         .mat-column-categoryPipeline,
@@ -82,7 +86,7 @@ tr {
   height: 36px;
   th {
     height: 16px;
-    color: #2d2d2d;
+    color: #777777;
     font-size: 12px;
   }
   .mat-column-actions {
@@ -93,4 +97,76 @@ tr {
   .mat-column-select {
     padding-top: 10px;
   }
+}
+
+.row-highlight {
+  background-color: #9dca3a30;
+}
+
+.fc__row {
+  height: 100%;
+  position: absolute;
+  width: 760px;
+  bottom: 0;
+  right: 0;
+
+  &-info {
+    box-shadow: -5px 5px 13px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4d7dc;
+    background: #ffffff;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &-close {
+    box-shadow: -5px 5px 13px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4d7dc;
+    background: #ffffff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -50px;
+  }
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  text-align: right;
+}
+
+th.mat-column-name {
+  text-align: left !important;
+}
+
+.person1 {
+  background-image: url("/assets/images/person1.jpg");
+  height: 40px;
+  width: 40px;
+  background-size: 58px;
+  background-position-x: -6px;
+  border-radius: 40px;
+  margin-right: 4px;
+}
+
+.person2 {
+  background-image: url("/assets/images/person2.jpg");
+  height: 40px;
+  width: 40px;
+  background-size: 58px;
+  background-position-x: -6px;
+  border-radius: 40px;
+  margin-right: 4px;
+}
+
+.person3 {
+  background-image: url("/assets/images/person3.jpg");
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
+  background-position-x: 0px;
+  border-radius: 40px;
+  margin-right: 4px;
 }

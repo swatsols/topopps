@@ -85,16 +85,9 @@ const ELEMENT_DATA1 = [
     changesSince: "+ $110,000",
     amountPercent: "100",
     changePercent: "100"
-  },
-  {
-    category: "Engaged",
-    opportunities: 50,
-    amount: "$414,241",
-    changesSince: "- $114,200",
-    amountPercent: "60",
-    changePercent: "60"
   }
 ];
+declare var google;
 @Component({
   selector: "app-my-forecast",
   templateUrl: "./my-forecast.component.html",
