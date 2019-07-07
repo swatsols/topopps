@@ -6,16 +6,17 @@
   .tab {
     height: 30px;
     overflow: hidden;
-    width: 150px;
+    width: 180px;
     span {
       height: 24px;
       font-family: "Segoe UI";
-      font-size: 14px;
+      font-size: 12px;
       line-height: 24px;
       color: #777777;
     }
     span.active {
-      color: #000000;
+      color: #222222;
+      font-weight: 500;
     }
   }
   .chevron-up {

@@ -145,15 +145,15 @@ export class TeamForecastComponent implements OnInit {
     "mostLikely"
   ];
   public columnInfo = [
-    { key: "forecast", label: "Forecast" },
-    { key: "selfReporting", label: "Self Reporting" },
-    { key: "mngrReporting", label: "Mngr Reporting" },
-    { key: "won", label: "Won" },
-    { key: "stagePipeline", label: "Stage Pipeline" },
-    { key: "categoryPipeline", label: "Category Pipeline" },
-    { key: "commit", label: "Commit" },
-    { key: "bestCase", label: "Best Case" },
-    { key: "mostLikely", label: "Most Likely" }
+    { key: "forecast", label: "FORECAST" },
+    { key: "selfReporting", label: "SELF REPORTING" },
+    { key: "mngrReporting", label: "MNGR REPORTING" },
+    { key: "won", label: "WON" },
+    { key: "stagePipeline", label: "STAGE PIPELINE" },
+    { key: "categoryPipeline", label: "CATEGORY PIPELINE" },
+    { key: "commit", label: "COMMIT" },
+    { key: "bestCase", label: "BEST CASE" },
+    { key: "mostLikely", label: "MOST LIKELY" }
   ];
   dataSource = ELEMENT_DATA;
   constructor() {}

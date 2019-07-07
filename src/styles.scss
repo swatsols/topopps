@@ -7,7 +7,7 @@ body {
 }
 
 .container-fluid {
-  padding: 0px 20px;
+  padding: 0px 0px;
   padding-left: 0px;
 }
 
@@ -62,4 +62,53 @@ td.mat-cell:last-of-type,
 td.mat-footer-cell:last-of-type,
 th.mat-header-cell:last-of-type {
   padding-right: 12px !important;
+}
+
+.mat-tab-label-active {
+  span {
+    color: #222222 !important;
+  }
+}
+
+.mat-header-cell {
+  font-weight: 400;
+}
+
+.mat-cell,
+.mat-footer-cell {
+  color: #222222;
+}
+
+.nav-svg {
+  height: 30px;
+  width: 32px;
+  background-size: 30px !important;
+  background-repeat: no-repeat !important;
+  margin-bottom: 2px;
+}
+.forecast-icon {
+  background: url("/assets/svg/forecast.svg");
+}
+.analyst-icon {
+  background: url("/assets/svg/analytics.svg");
+}
+.report-icon {
+  background: url("/assets/svg/Reports.svg");
+}
+.funnel-icon {
+  background: url("/assets/svg/funnel.svg");
+}
+.coach-icon {
+  background: url("assets/svg/presentation.svg");
+}
+.home-icon {
+  background: url("assets/svg/home.svg");
+}
+.help-icon {
+  background: url("assets/svg/help.svg");
+  height: 37px;
+  width: 30px;
+}
+.settings-icon {
+  background: url("assets/svg/settings.svg");
 }

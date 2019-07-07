@@ -7,12 +7,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ForecastComponent implements OnInit {
   public tabItems = [
-    { name: "Forecast Summary" },
-    { name: "Future Forecast" },
-    { name: "Forecast Worksheet" }
+    { name: "FORECAST SUMMARY" },
+    { name: "FUTURE FORECAST" },
+    { name: "FORECAST WORKSHEET" }
   ];
 
-  public selectedTab = "Forecast Summary";
+  public selectedTab = "FORECAST SUMMARY";
   constructor() {}
 
   ngOnInit() {}

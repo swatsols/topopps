@@ -1,6 +1,6 @@
 <div class="myfc d-flex flex-column ">
     <div class="myfc__row1 d-flex flex-row">
-        <div class="myfc__card card-trend d-flex flex-column" style="height: 235px;">
+        <!-- <div class="myfc__card card-trend d-flex flex-column" style="height: 250px;">
             <label class="myfc__title">Trend Graph</label>
 
             <div class="app-card" style="position:relative;">
@@ -30,32 +30,32 @@
                 </div>
                 <div id="chart_div"></div>
             </div>
-        </div>
-        <div class="myfc__card flex-grow-1 card-q1 d-flex flex-column" style="height: 235px;">
+        </div> -->
+        <div class="myfc__card flex-grow-1 card-q1 d-flex flex-column" style="height: 180px;">
             <label class="myfc__title">Q1 - 2019</label>
             <div class="app-card d-flex  align-content-stretch flex-wrap">
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Forecast</span>
+                    <span class="title">FORECAST</span>
                     <span class="value">$2,119,708</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Self Reporting</span>
+                    <span class="title">SELF REPORTNG</span>
                     <span class="value">$1,350,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Mngr Reporting</span>
+                    <span class="title">MNGR REPORTING</span>
                     <span class="value">$2,410,000 <i class="material-icons edit-icon">edit</i></span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Rollup</span>
+                    <span class="title">ROLLUP</span>
                     <span class="value">$2,410,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Quota</span>
+                    <span class="title">QUOTA</span>
                     <span class="value">$1,350,000</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Won <i class="material-icons settings-icon">settings</i></span>
+                    <span class="title">WON <i class="material-icons settings-icon">settings</i></span>
                     <span class="value">$529,000</span>
                     <span class="d-flex flex-row" style="height: 0px;margin-top: 5px;">
                         <mat-progress-bar class="pull-left" class="won-progress" [color]="'primary'"
@@ -65,28 +65,29 @@
                     </span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Expected to be won</span>
+                    <span class="title">EXPECTED TO BE WON</span>
                     <span class="value">$1,590,708</span>
                 </div>
                 <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Category Pipeline <i class="material-icons settings-icon">settings</i></span>
+                    <span class="title">CATEGORY PIPELINE </span>
                     <span class="value">$10,584,280</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Stage Pipeline</span>
+                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;">
+                    <span class="title">STAGE PIPELINE</span>
                     <span class="value">$9,185,240</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Commit</span>
+                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;">
+                    <span class="title">COMMIT</span>
                     <span class="value">$2.5 M</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center">
-                    <span class="title">Most Likely</span>
+                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;      border-right: 1px solid #d4d7dc;
+      ">
+                    <span class="title">MOST LIKELY</span>
                     <span class="value">$1.6 M</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center">
+                <!-- <div class="app-card__tab d-flex flex-column justify-content-center">
 
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -97,7 +98,7 @@
                 <div style="height: 380px;overflow: auto;border-bottom: 1px solid #E4E4E5;">
                     <table style="overflow:auto;" mat-table [dataSource]="dataSource">
                         <ng-container matColumnDef="opportunityInfo">
-                            <th mat-header-cell *matHeaderCellDef>Opportunity Info</th>
+                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITY INFO</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="name">{{element.name}}</span>
@@ -106,7 +107,7 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="forecast">
-                            <th mat-header-cell *matHeaderCellDef>Forecast</th>
+                            <th mat-header-cell *matHeaderCellDef>FORECAST</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <div><span class="fc">{{element.foreCast}}</span></div>
@@ -115,12 +116,12 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="oppAmount">
-                            <th mat-header-cell *matHeaderCellDef>OPP Amount</th>
+                            <th mat-header-cell *matHeaderCellDef>OPP AMOUNT</th>
                             <td mat-cell *matCellDef="let element"> {{element.oppAmount}}
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="customReporting">
-                            <th mat-header-cell *matHeaderCellDef>Custom Reporting</th>
+                            <th mat-header-cell *matHeaderCellDef>CUSTOM REPORTING</th>
                             <td mat-cell *matCellDef="let element">
                                 <input type="text" [value]="element.customReporting" class="form-control repo-input">
                             </td>
@@ -141,7 +142,7 @@
                 <div style="height: 100%;overflow: auto;border-bottom: 1px solid #E4E4E5;">
                     <table style="width: 100%; overflow:auto;" mat-table [dataSource]="dataSource1">
                         <ng-container matColumnDef="category">
-                            <th mat-header-cell *matHeaderCellDef>Category</th>
+                            <th mat-header-cell *matHeaderCellDef>CATEGORY</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <span class="name">{{element.category}}</span>
@@ -149,7 +150,7 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="opportunities">
-                            <th mat-header-cell *matHeaderCellDef>Opportunities</th>
+                            <th mat-header-cell *matHeaderCellDef>OPPORTUNITIES</th>
                             <td mat-cell *matCellDef="let element">
                                 <div class="d-flex flex-column justify-content-center">
                                     <div>
@@ -162,10 +163,10 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="amount">
-                            <th mat-header-cell *matHeaderCellDef>Amount</th>
+                            <th mat-header-cell *matHeaderCellDef>AMOUNT</th>
                             <td mat-cell *matCellDef="let element">
                                 <span>{{element.amount}}</span>
-                                <div class="d-flex flex-row justify-content-end" style="height: 0%;margin-top: 5px;">
+                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
                                     <mat-progress-bar class="pipeline-progress" [color]="'primary'"
                                         [mode]="'determinate'" [value]="element.amountPercent" [bufferValue]="100">
                                     </mat-progress-bar>
@@ -175,10 +176,10 @@
                             </td>
                         </ng-container>
                         <ng-container matColumnDef="changesSince">
-                            <th mat-header-cell *matHeaderCellDef>Changes Since</th>
+                            <th mat-header-cell *matHeaderCellDef>CHANGES SINCE</th>
                             <td mat-cell *matCellDef="let element">
                                 <span> {{element.changesSince}}</span>
-                                <div class="d-flex flex-row justify-content-end" style="height: 0%;margin-top: 5px;">
+                                <div class="d-flex flex-row" style="height: 0%;margin-top: 5px;">
                                     <mat-progress-bar class="pipeline-progress" [color]="'primary'"
                                         [mode]="'determinate'" [value]="element.changePercent" [bufferValue]="100">
                                     </mat-progress-bar>

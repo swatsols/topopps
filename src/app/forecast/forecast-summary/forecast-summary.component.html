@@ -1,9 +1,15 @@
 <div class="fsum">
-  <mat-tab-group [dynamicHeight]="true" (selectedTabChange)="tabChanged($event)">
-    <mat-tab label="My Forecast">
+  <mat-tab-group [disableRipple]="true" [dynamicHeight]="true" (selectedTabChange)="tabChanged($event)">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span>My Forecast</span>
+      </ng-template>
       <app-my-forecast></app-my-forecast>
     </mat-tab>
-    <mat-tab label="Team Forecast">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span>Team Forecast</span>
+      </ng-template>
       <app-team-forecast></app-team-forecast>
     </mat-tab>
   </mat-tab-group>

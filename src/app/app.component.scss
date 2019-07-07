@@ -1,4 +1,5 @@
 .app {
+  min-height: 100%;
   .header {
     width: 100%;
     margin-left: auto;
@@ -20,8 +21,8 @@
       justify-content: space-around;
       align-items: center;
       i {
-        margin: 0px 10px 0px 10px;
-        font-size: 2rem;
+        margin: 0px 5px 0px 5px;
+        font-size: 1.8rem;
         color: #a4aab2;
       }
       &_account {
@@ -43,8 +44,8 @@
   }
   .body {
     .navigation {
-      height: 100%;
-      width: 120px;
+      min-height: 100%;
+      width: 100px;
     }
     .content {
       width: 100%;

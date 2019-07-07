@@ -1,7 +1,10 @@
 .teamfc {
   height: 100%;
-  margin-top: 20px;
+  padding-top: 30px;
   &__actions {
+    .mat-form-field {
+      font-size: 13px;
+    }
     &-select {
       padding: 5px 10px;
       border: 1px solid #d4d7dc;
@@ -42,7 +45,7 @@
         }
         .mat-column-name {
           i {
-            font-size: 36px;
+            font-size: 30px;
             color: #d4d7dc;
             padding-top: 5px;
           }
@@ -72,7 +75,7 @@
 
 .reset {
   color: #777777;
-  font-size: 15px;
+  font-size: 13px;
   span {
     margin-left: 5px;
   }
@@ -82,12 +85,12 @@ tr {
   border: 1px solid #d4d7dc;
 }
 .mat-header-row {
-  background-color: #ededed;
+  background-color: #eaeef1;
   height: 36px;
   th {
     height: 16px;
     color: #777777;
-    font-size: 12px;
+    font-size: 10px;
   }
   .mat-column-actions {
     padding-top: 6px;
@@ -134,7 +137,7 @@ tr {
 
 th.mat-header-cell,
 td.mat-cell {
-  text-align: right;
+  // text-align: right;
 }
 
 th.mat-column-name {

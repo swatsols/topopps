@@ -1,11 +1,16 @@
 .myfc {
-  margin-top: 10px;
+  padding-top: 30px;
   &__row1 {
-    height: 230px;
     margin-bottom: 30px;
     .card-q1 {
-      margin-left: 20px;
+      // margin-left: 20px;
       width: 50%;
+      .app-card {
+        border-bottom: 1px solid #d4d7dc;
+        border-right: 1px solid #d4d7dc;
+        border-left: none;
+        // border-top: none;
+      }
     }
   }
   &__row2 {
@@ -54,16 +59,18 @@
 
   .app-card {
     &__tab {
-      width: 25%;
-      border: 1px solid #e6e8ea;
+      width: 12.5%;
+      border: 1px solid #d4d7dc;
       padding: 0px 0px 0px 20px;
-
+      border-top: none;
+      border-right: none;
+      overflow: hidden;
       .title {
         color: #777777;
-        font-size: 12px;
+        font-size: 10px;
       }
       .value {
-        color: #000000;
+        color: #222222;
         font-size: 14px;
         margin-top: 2px;
       }
@@ -112,12 +119,12 @@ tr {
   border-bottom: 1px solid #d4d7dc;
 }
 .mat-header-row {
-  background-color: #ededed;
-  height: 36px;
+  background-color: #eaeef1;
+  height: 30px;
   th {
     height: 16px;
     color: #777777;
-    font-size: 12px;
+    font-size: 10px;
   }
   .mat-column-actions {
     padding-top: 6px;
@@ -143,7 +150,7 @@ tr {
 }
 
 .mat-column-forecast {
-  width: 75px;
+  width: 100px;
   .fc {
     background-color: #64c3d1;
     padding: 2px 4px 2px 4px;
@@ -189,7 +196,7 @@ tr {
 .mat-column-opportunities,
 .mat-column-amount,
 .mat-column-changesSince {
-  text-align: right !important;
+  // text-align: right !important;
 }
 
 .mat-column-customReporting {

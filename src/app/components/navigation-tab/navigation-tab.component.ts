@@ -7,7 +7,7 @@ import { EventEmitter } from "@angular/core";
   styleUrls: ["./navigation-tab.component.scss"]
 })
 export class NavigationTabComponent implements OnInit {
-  public chevronPosition = "63px";
+  public chevronPosition = "78px";
   @Input()
   public tabItems;
   public selectedIndex = 0;
@@ -20,7 +20,7 @@ export class NavigationTabComponent implements OnInit {
 
   updateTab(tab, index: number) {
     this.selectedIndex = index;
-    this.chevronPosition = 150 * index + 63 + "px";
+    this.chevronPosition = 180 * index + 78 + "px";
     this.tabChange.emit(tab);
   }
 }
