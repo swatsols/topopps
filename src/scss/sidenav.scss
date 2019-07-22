@@ -1,0 +1,89 @@
+.page-nav {
+  width: 100px;
+  height: 100%;
+  background-color: $grey-color;
+  border-radius: 3px;
+  padding-top: 20px;
+  overflow: hidden;
+
+  .nav-item {
+    outline: none;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin-bottom: 0.5rem;
+
+    i {
+      color: $white-color;
+      font-size: 1.8rem;
+    }
+
+    span {
+      font-weight: 100;
+      font-size: 13px;
+    }
+
+    .forecast-icon {
+      background: url("/assets/svg/forecast.svg");
+    }
+
+    .analyst-icon {
+      background: url("/assets/svg/analytics.svg");
+    }
+
+    .report-icon {
+      background: url("/assets/svg/Reports.svg");
+    }
+
+    .funnel-icon {
+      background: url("/assets/svg/funnel.svg");
+    }
+
+    .coach-icon {
+      background: url("assets/svg/presentation.svg");
+    }
+
+    .home-icon {
+      background: url("assets/svg/home.svg");
+    }
+
+    .help-icon {
+      background: url("assets/svg/help.svg");
+      height: 37px;
+      width: 30px;
+    }
+
+    .settings-icon {
+      background: url("assets/svg/settings.svg");
+    }
+  }
+
+  .active {
+    border-radius: 3px 0 0 3px;
+    background: $primary-color;
+    margin-left: 10px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+  .navigation {
+    transition: all linear 0.2s;
+    margin-left: -80px;
+
+    &.open {
+      margin-left: 0px;
+    }
+  }
+
+  .page-nav {
+    width: 80px;
+    padding-top: 10px;
+    position: relative;
+  }
+}

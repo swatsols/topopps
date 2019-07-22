@@ -32,6 +32,7 @@ import {
 } from "@angular/material";
 import { ProfileSummaryComponent } from './forecast/forecast-summary/team-forecast/profile-summary/profile-summary.component';
 import { OpportunitiesComponent } from './forecast/forecast-summary/team-forecast/opportunities/opportunities.component';
+import { IntegrationsComponent } from './integrations/integrations.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { OpportunitiesComponent } from './forecast/forecast-summary/team-forecas
     MyForecaseComponent,
     TeamForecastComponent,
     ProfileSummaryComponent,
-    OpportunitiesComponent
+    OpportunitiesComponent,
+    IntegrationsComponent
   ],
   imports: [
     BrowserModule,

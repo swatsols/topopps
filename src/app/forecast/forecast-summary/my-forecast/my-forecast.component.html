@@ -31,9 +31,9 @@
                 <div id="chart_div"></div>
             </div>
         </div> -->
-        <div class="myfc__card flex-grow-1 card-q1 d-flex flex-column" style="height: 180px;">
+        <div class="myfc__card flex-grow-1 card-q1 d-flex flex-column">
             <label class="myfc__title">Q1 - 2019</label>
-            <div class="app-card d-flex  align-content-stretch flex-wrap">
+            <div class="d-flex  align-content-stretch flex-wrap">
                 <div class="app-card__tab d-flex flex-column justify-content-center">
                     <span class="title">FORECAST</span>
                     <span class="value">$2,119,708</span>
@@ -72,16 +72,15 @@
                     <span class="title">CATEGORY PIPELINE </span>
                     <span class="value">$10,584,280</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;">
+                <div class="app-card__tab d-flex flex-column justify-content-center">
                     <span class="title">STAGE PIPELINE</span>
                     <span class="value">$9,185,240</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;">
+                <div class="app-card__tab d-flex flex-column justify-content-center">
                     <span class="title">COMMIT</span>
                     <span class="value">$2.5 M</span>
                 </div>
-                <div class="app-card__tab d-flex flex-column justify-content-center" style="border-bottom: none;      border-right: 1px solid #d4d7dc;
-      ">
+                <div class="app-card__tab d-flex flex-column justify-content-center">
                     <span class="title">MOST LIKELY</span>
                     <span class="value">$1.6 M</span>
                 </div>
@@ -94,7 +93,7 @@
     <div class="myfc__row2 d-flex flex-row">
         <div class="myfc__card card-fc-calc d-flex flex-column">
             <label class="myfc__title">Global Forecast Write-In Calculator</label>
-            <div class="app-card d-flex flex-column" style="height: 438px;">
+            <div class="app-card d-flex flex-column" style="max-height: 438px;">
                 <div style="height: 380px;overflow: auto;border-bottom: 1px solid #E4E4E5;">
                     <table style="overflow:auto;" mat-table [dataSource]="dataSource">
                         <ng-container matColumnDef="opportunityInfo">
@@ -138,8 +137,8 @@
         </div>
         <div class="myfc__card card-pipeline d-flex flex-column">
             <label class="myfc__title">Pipeline Contribution</label>
-            <div class="app-card d-flex flex-column" style="height: 438px;">
-                <div style="height: 100%;overflow: auto;border-bottom: 1px solid #E4E4E5;">
+            <div class="app-card d-flex flex-column" style="height: 100%">
+                <div style="height: 100%;overflow: auto;">
                     <table style="width: 100%; overflow:auto;" mat-table [dataSource]="dataSource1">
                         <ng-container matColumnDef="category">
                             <th mat-header-cell *matHeaderCellDef>CATEGORY</th>

@@ -3,10 +3,12 @@
   border: 1px solid #d4d7dc;
   background-color: #ffffff;
   padding: 0px 20px;
+
   .tab {
     height: 30px;
     overflow: hidden;
     width: 180px;
+
     span {
       height: 24px;
       font-family: "Segoe UI";
@@ -14,13 +16,16 @@
       line-height: 24px;
       color: #777777;
     }
+
     span.active {
       color: #222222;
       font-weight: 500;
     }
   }
+
   .chevron-up {
     position: absolute;
+
     i {
       position: relative;
       transition: all linear 0.2s;

@@ -8,6 +8,7 @@ import { CoachComponent } from "./coach/coach.component";
 import { ReportingComponent } from "./reporting/reporting.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { HelpComponent } from "./help/help.component";
+import { IntegrationsComponent } from "./integrations/integrations.component";
 
 const routes: Routes = [
   {
@@ -35,12 +36,20 @@ const routes: Routes = [
     component: ReportingComponent
   },
   {
+    path: "integrations",
+    component: IntegrationsComponent
+  },
+  {
     path: "settings",
     component: SettingsComponent
   },
   {
     path: "help",
     component: HelpComponent
+  },
+  {
+    path: "**",
+    redirectTo: "forecast"
   }
 ];
 

@@ -1,6 +1,9 @@
 <div class="container-fluid app d-flex flex-column">
   <div class="header">
-    <div class="header__logo float-left">
+    <div class="float-left">
+      <div class="header__logo ">
+      </div>
+      <i class="material-icons toggle-menu" (click)="toggleNavigation()">menu</i>
     </div>
     <div class="header__actions float-right">
       <i class="material-icons">
@@ -11,7 +14,7 @@
       </i>
       <div class="float-right header__actions_account">
         <span class="pic"></span>
-        <span style="margin-left: 2px;font-size: 14px;">Jim Eberlin</span>
+        <span class="header__name" style="margin-left: 2px;font-size: 14px;">Jim Eberlin</span>
         <i class="material-icons" style="    margin-left: 0.2rem;
         margin-right: 0px;">
           arrow_drop_down
@@ -20,7 +23,7 @@
     </div>
   </div>
   <div class="body d-flex flex-grow-1">
-    <div class="navigation">
+    <div class="navigation" [ngClass]="{'open': !closeNav}">
       <app-navigation></app-navigation>
     </div>
     <div class="content">

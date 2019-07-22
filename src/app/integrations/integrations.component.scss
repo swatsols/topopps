@@ -1,0 +1,166 @@
+.integration {
+  width: 100%;
+  height: 100%;
+
+  &__header {
+    height: 50px;
+    border: 1px solid #D4D7DC;
+    background-color: #FFFFFF;
+    line-height: 50px;
+    padding: 0px 20px;
+    box-sizing: content-box;
+
+    .app-labels {
+      margin-top: 12px;
+    }
+
+    .filter {
+      height: 50px;
+
+      .select-filter {
+        width: 125px;
+        border: 1px solid #DDE0E6;
+        font-size: 12px;
+        height: 30px;
+        padding-left: 5px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 30px;
+
+    .integration-card {
+      border: 1px solid #D4D7DC;
+      height: 215px;
+      width: 350px;
+      margin-right: 14px;
+      margin-bottom: 14px;
+      background: #FFFFFF;
+      padding: 12px 14px;
+      position: relative;
+
+      .integration-logo {
+        height: 51px;
+        width: 100%;
+      }
+
+      .integration-img {
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .integration-label {
+        font-size: 14px;
+        font-weight: 500;
+
+      }
+
+      .integration-desc {
+        margin-top: 11px;
+        border-top: 0.5px dashed #D4D7DC;
+        font-size: 12px;
+        margin-top: 5px;
+        padding-top: 5px;
+      }
+
+      .integration-action {
+        .actn-btn {
+          height: 30px;
+          width: 71px;
+          padding: 0px;
+          border: 1px solid #9B9B9B;
+          font-size: 13px;
+          background: #ffffff;
+          border-radius: 3px;
+          line-height: 20px;
+          float: right;
+          margin-top: 15px;
+
+          &:hover {
+            background: #9B9B9B;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.salesforce-img {
+  height: 51px;
+  width: 73px;
+  float: left;
+  background-image: url('/assets/images/integrations/salesforce.png');
+}
+
+.salesforce-img+span {
+  float: left;
+  line-height: 51px;
+  margin-left: 6px;
+}
+
+.xactly-img {
+  height: 45px;
+  width: 137px;
+  background-position-y: 8px;
+  background-image: url('/assets/images/integrations/xactly.png');
+}
+
+.zoominfo-img {
+  height: 51px;
+  width: 190px;
+  background-image: url('/assets/images/integrations/zoominfo.svg');
+  background-position-x: -5px;
+}
+
+.discoverorg-img {
+  height: 51px;
+  width: 228px;
+  background-position-y: -16px;
+  background-position-x: -16px;
+  background-image: url('/assets/images/integrations/discoverorg.png');
+}
+
+.salesforcenav-img {
+  height: 51px;
+  width: 290px;
+  background-image: url('/assets/images/integrations/salesnavigator.png');
+  background-position-x: -5px;
+}
+
+.salesloft-img {
+  height: 43px;
+  width: 177px;
+  background-image: url('/assets/images/integrations/salesloft.png');
+}
+
+.outreach-img {
+  height: 44px;
+  width: 234px;
+  background-image: url('/assets/images/integrations/outreach.png');
+
+}
+
+.brainshark-img {
+  height: 51px;
+  background-position-y: -53px;
+  width: 208px;
+  background-image: url('/assets/images/integrations/brainshark.png');
+}
+
+
+.outlook-img {
+  height: 42px;
+  // background-position-y: -53px;
+  width: 173px;
+  background-image: url('/assets/images/integrations/outlook.png');
+}
+
+.gmail-img {
+  height: 51px;
+  background-position-y: -5px;
+  width: 142px;
+  background-image: url('/assets/images/integrations/gmail.png');
+}

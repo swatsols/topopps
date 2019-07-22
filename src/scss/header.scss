@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  background: $light-grey-color;
+  height: 66px;
+  padding: 10px;
+
+  &__logo {
+    align-items: center;
+    height: 100%;
+    background-image: url("/assets/images/topopps-logo.png");
+    background-repeat: no-repeat;
+    width: 120px;
+    background-position-y: center;
+    background-size: 120px;
+    float: left;
+    height: 46px;
+  }
+
+  .toggle-menu {
+    line-height: 46px;
+    margin-left: 10px;
+    display: none;
+    float: left;
+  }
+
+  &__actions {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    i {
+      margin: 0px 5px 0px 5px;
+      font-size: 1.8rem;
+      color: #a4aab2;
+    }
+
+    &_account {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pic {
+        background-image: url("/assets/images/jim.jpg");
+        margin-right: 4px;
+        height: 36px;
+        width: 36px;
+        background-size: 36px;
+        border-radius: 36px;
+        background-position-x: -3px;
+        border: 2px solid $primary-color;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    height: 60px;
+
+    &__actions {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    &__logo {
+      width: 100px;
+      background-size: 100px;
+    }
+
+    &__name {
+      display: none;
+    }
+
+    &__actions {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header .toggle-menu {
+    display: block;
+  }
+}

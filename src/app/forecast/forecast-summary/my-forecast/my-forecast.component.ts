@@ -87,7 +87,7 @@ const ELEMENT_DATA1 = [
     changePercent: "100"
   }
 ];
-declare var google;
+// declare var google;
 @Component({
   selector: "app-my-forecast",
   templateUrl: "./my-forecast.component.html",
@@ -117,36 +117,32 @@ export class MyForecaseComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    google.charts.load("current", { packages: ["corechart", "line"] });
-    google.charts.setOnLoadCallback(drawCurveTypes);
-
-    function drawCurveTypes() {
-      var data = new google.visualization.DataTable();
-      data.addColumn("string", "X");
-      data.addColumn("number", "x");
-      data.addColumn("number", "y");
-      data.addColumn("number", "z");
-
-      data.addRows([
-        ["Jan, 19", 1, 0.2, 3],
-        ["Feb, 19", 0.4, 2.2, 3.6],
-        ["Mar, 19", 3.7, 1.5, 1.8]
-      ]);
-
-      var options: any = {
-        hAxis: {},
-        vAxis: {
-          format: "$#M"
-        },
-        series: {},
-        legend: { position: "none" },
-        tooltip: { isHtml: true }
-      };
-
-      var chart = new google.visualization.LineChart(
-        document.getElementById("chart_div")
-      );
-      chart.draw(data, options);
-    }
+    // google.charts.load("current", { packages: ["corechart", "line"] });
+    // google.charts.setOnLoadCallback(drawCurveTypes);
+    // function drawCurveTypes() {
+    //   var data = new google.visualization.DataTable();
+    //   data.addColumn("string", "X");
+    //   data.addColumn("number", "x");
+    //   data.addColumn("number", "y");
+    //   data.addColumn("number", "z");
+    //   data.addRows([
+    //     ["Jan, 19", 1, 0.2, 3],
+    //     ["Feb, 19", 0.4, 2.2, 3.6],
+    //     ["Mar, 19", 3.7, 1.5, 1.8]
+    //   ]);
+    //   var options: any = {
+    //     hAxis: {},
+    //     vAxis: {
+    //       format: "$#M"
+    //     },
+    //     series: {},
+    //     legend: { position: "none" },
+    //     tooltip: { isHtml: true }
+    //   };
+    //   var chart = new google.visualization.LineChart(
+    //     document.getElementById("chart_div")
+    //   );
+    //   chart.draw(data, options);
+    // }
   }
 }

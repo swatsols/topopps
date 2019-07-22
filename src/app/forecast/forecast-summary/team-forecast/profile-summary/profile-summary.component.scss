@@ -1,10 +1,13 @@
 .ps {
   height: 100%;
   overflow-x: hidden;
+  padding: 15px;
+
   &__header {
-    padding: 20px 20px;
-    height: 90px;
+    height: 60px;
+    margin-bottom: 15px;
   }
+
   &__profile {
     &-icon {
       font-size: 62px;
@@ -12,25 +15,35 @@
       margin-right: 5px;
     }
   }
+
+  &__card {
+    margin-bottom: 15px;
+  }
+
+
   .name {
     color: #222222;
     font-size: 14px;
   }
+
   .role {
     color: #777777;
     font-size: 12px;
   }
+
   .app-card {
-    background-color: #f8f8f9;
+
+    // background-color: #f8f8f9;
     &__tab {
       width: 25%;
-      border: 1px solid #e6e8ea;
+      // border: 1px solid #e6e8ea;
       padding: 0px 0px 0px 20px;
 
       .title {
         color: #777777;
         font-size: 10px;
       }
+
       .value {
         color: #222222;
         font-size: 14px;
@@ -67,13 +80,34 @@
     }
   }
 
+  &__bsmetrics {
+    margin-bottom: 15px;
+    height: 130px;
+  }
+
+
+  .dial {
+    height: 100px;
+    width: 121px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    float: left;
+
+    .c100 {
+      margin-bottom: 8px;
+    }
+  }
+
   &__fcchange {
-    padding: 20px;
-    padding-top: 0px;
+    margin-bottom: 15px;
+
     label {
       color: #222222;
       font-size: 16px;
     }
+
     .tab {
       border: 1px solid rgba(212, 215, 220, 0.8);
       border-radius: 3px;
@@ -82,10 +116,12 @@
       justify-content: center;
       width: 18%;
       padding: 20px;
+
       .title {
         color: #777777;
         font-size: 10px;
       }
+
       .value {
         color: #222222;
         font-size: 14px;
@@ -94,23 +130,25 @@
   }
 
   &__insights {
-    padding: 20px;
-    padding-top: 0px;
+
     .parent-label {
       width: 100%;
       border-bottom: 1px solid #d4d7dc;
       height: 30px;
       margin-bottom: 0px;
     }
+
     .title {
       color: #222222;
       font-size: 14px;
       width: 100%;
     }
+
     .description {
       color: #777777;
       font-size: 13px;
     }
+
     &-row {
       border-bottom: 1px dashed #d4d7dc;
       padding-bottom: 15px;
@@ -120,7 +158,7 @@
 }
 
 .pic {
-  background-image: url("/assets/images/person2.jpg");
+  // background-image: url("/assets/images/person2.png");
   height: 55px;
   width: 55px;
   background-size: 59px;

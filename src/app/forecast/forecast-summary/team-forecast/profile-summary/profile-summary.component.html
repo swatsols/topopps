@@ -1,13 +1,13 @@
 <div class="ps">
   <div class="ps__header d-flex flex-row justify-content-between">
-    <div class="ps__profile d-flex flex-row align-items-center">
-      <div class="d-flex justify-content-center align-items-center">
-        <div class="pic"></div>
+    <div class="ps__profile d-flex flex-row ">
+      <div class="d-flex justify-content-center">
+        <div class="pic {{data.personImg}}"></div>
       </div>
       <div class="d-flex flex-column">
-        <span class="name">Jessy Rose</span>
-        <span class="role">Sales Lead, Vancouver, CA</span>
-        <span class="role">jeassy.r@companyemail.com</span>
+        <span class="name">{{data.name}}</span>
+        <span class="role">{{data.role}}</span>
+        <span class="role">{{data.email}}</span>
       </div>
     </div>
     <div class="ps__qinfo d-flex flex-column justify-content-end">
@@ -15,8 +15,8 @@
       <span style="font-size: 15px; font-weight: 600;">Ends in 65 Days</span>
     </div>
   </div>
-  <div class="ps__card flex-grow-1 card-q1 d-flex flex-column" style="height: 235px;padding: 20px">
-    <div class="app-card d-flex  align-content-stretch flex-wrap">
+  <div class="ps__card flex-grow-1 card-q1 d-flex flex-column">
+    <div class="d-flex  align-content-stretch flex-wrap">
       <div class="app-card__tab d-flex flex-column justify-content-center">
         <span class="title">FORECAST</span>
         <span class="value">$2,119,708</span>
@@ -96,6 +96,47 @@
         <span class="title">LOST</span>
         <span class="value">18</span>
       </div>
+    </div>
+  </div>
+
+  <div class="ps__bsmetrics">
+    <label>Brainshark Metrics</label>
+    <br>
+    <div class="dial">
+
+      <div class="c100 center" [ngClass]="{'p100': data.coachingCompleted/data.coachingTotal * 100 > 50}">
+        <span>{{data.coachingCompleted}}</span>
+        <div class="slice">
+          <div class="bar"
+            [ngStyle]="{'transform': 'rotate(' + 360 * data.coachingCompleted/data.coachingTotal + 'deg)'}">
+          </div>
+          <div class="fill"></div>
+        </div>
+      </div>
+      <span style="font-size: 11px;">{{data.coachingCompleted}} of {{data.coachingTotal}} Coaching completed</span>
+    </div>
+    <div class="dial">
+      <div class="c100 center" [ngClass]="{'p100': data.coursesCompleted/data.coursesTotal * 100 > 50}">
+        <span>{{data.coursesCompleted}}</span>
+        <div class="slice">
+          <div class="bar"
+            [ngStyle]="{'transform': 'rotate(' + 360 * data.coursesCompleted/data.coursesTotal + 'deg)'}"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+      <span style="font-size: 11px;">{{data.coursesCompleted}} of {{data.coursesTotal}} Courses completed</span>
+    </div>
+    <div class="dial">
+      <div class="c100 center" [ngClass]="{'p100': data.curriculumCompleted/data.curriculumTotal * 100 > 50}">
+        <span>{{data.curriculumCompleted}}</span>
+        <div class="slice">
+          <div class="bar"
+            [ngStyle]="{'transform': 'rotate(' + 360 * data.curriculumCompleted/data.curriculumTotal + 'deg)'}"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+      <span style="font-size: 11px;">{{data.curriculumCompleted}} of {{data.curriculumTotal}} Curriculum
+        completed</span>
     </div>
   </div>
 

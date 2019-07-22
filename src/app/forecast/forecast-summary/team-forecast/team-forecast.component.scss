@@ -1,40 +1,54 @@
 .teamfc {
   height: 100%;
   padding-top: 30px;
+
   &__actions {
+    overflow-x: auto;
+    overflow-y: hidden;
+
     .mat-form-field {
       font-size: 13px;
     }
+
     &-select {
       padding: 5px 10px;
       border: 1px solid #d4d7dc;
       padding-top: 12px;
       background-color: #f8f8f9;
     }
+
     &-input {
       padding: 5px 10px;
       border: 1px solid #d4d7dc;
       padding-top: 12px;
       background-color: #f8f8f9;
+
       .search-icon {
         position: relative;
         top: 6px;
         left: -2px;
       }
     }
+
     &-actions {
-      width: 150px;
+      width: 250px;
     }
   }
+
   &__data {
+
+    overflow-x: auto;
+
     table {
       width: 100%;
+
       .mat-row {
         height: 60px;
 
         .mat-column-name {
           text-align: left;
         }
+
         .mat-column-mngrReporting,
         .mat-column-stagePipeline,
         .mat-column-categoryPipeline,
@@ -43,12 +57,14 @@
         .mat-column-mostLikely {
           color: #5d9ed3;
         }
+
         .mat-column-name {
           i {
             font-size: 30px;
             color: #d4d7dc;
             padding-top: 5px;
           }
+
           .percent {
             color: #222222;
             font-size: 10px;
@@ -57,10 +73,12 @@
         }
       }
     }
+
     mat-progress-bar {
       width: 100px;
       border-radius: 4px;
     }
+
     .name_info {
       margin-left: 5px;
     }
@@ -68,7 +86,7 @@
 }
 
 .mat-form-field {
-  width: 125px;
+  width: 150px;
   height: 40px;
   font-size: 14px;
 }
@@ -76,6 +94,7 @@
 .reset {
   color: #777777;
   font-size: 13px;
+
   span {
     margin-left: 5px;
   }
@@ -84,19 +103,23 @@
 tr {
   border: 1px solid #d4d7dc;
 }
+
 .mat-header-row {
   background-color: #eaeef1;
   height: 36px;
+
   th {
     height: 16px;
     color: #777777;
     font-size: 10px;
   }
+
   .mat-column-actions {
     padding-top: 6px;
     color: #2d2d2d;
     font-size: 12px;
   }
+
   .mat-column-select {
     padding-top: 10px;
   }
@@ -106,34 +129,6 @@ tr {
   background-color: #9dca3a30;
 }
 
-.fc__row {
-  height: 100%;
-  position: absolute;
-  width: 760px;
-  bottom: 0;
-  right: 0;
-
-  &-info {
-    box-shadow: -5px 5px 13px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid #d4d7dc;
-    background: #ffffff;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  &-close {
-    box-shadow: -5px 5px 13px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid #d4d7dc;
-    background: #ffffff;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: -50px;
-  }
-}
 
 th.mat-header-cell,
 td.mat-cell {
@@ -142,34 +137,4 @@ td.mat-cell {
 
 th.mat-column-name {
   text-align: left !important;
-}
-
-.person1 {
-  background-image: url("/assets/images/person1.jpg");
-  height: 40px;
-  width: 40px;
-  background-size: 58px;
-  background-position-x: -6px;
-  border-radius: 40px;
-  margin-right: 4px;
-}
-
-.person2 {
-  background-image: url("/assets/images/person2.jpg");
-  height: 40px;
-  width: 40px;
-  background-size: 58px;
-  background-position-x: -6px;
-  border-radius: 40px;
-  margin-right: 4px;
-}
-
-.person3 {
-  background-image: url("/assets/images/person3.jpg");
-  height: 40px;
-  width: 40px;
-  background-size: 40px;
-  background-position-x: 0px;
-  border-radius: 40px;
-  margin-right: 4px;
 }

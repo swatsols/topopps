@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 const ELEMENT_DATA = [
   {
@@ -14,7 +14,15 @@ const ELEMENT_DATA = [
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
     percent: 50,
-    personImg: "person1"
+    personImg: "person1",
+    role: "Sales Lead, Vancouver, CA",
+    email: "ethan.clark@topopps.com",
+    curriculumCompleted: 2,
+    curriculumTotal: 5,
+    coursesCompleted: 3,
+    coursesTotal: 10,
+    coachingCompleted: 5,
+    coachingTotal: 10
   },
   {
     index: 1,
@@ -29,7 +37,15 @@ const ELEMENT_DATA = [
     bestCase: "$2.1 M",
     mostLikely: "$1.3 M",
     percent: 30,
-    personImg: "person2"
+    personImg: "person2",
+    role: "Sales Lead, Vancouver, CA",
+    email: "jessy.r@topopps.com",
+    curriculumCompleted: 4,
+    curriculumTotal: 5,
+    coursesCompleted: 8,
+    coursesTotal: 10,
+    coachingCompleted: 9,
+    coachingTotal: 10
   },
   {
     index: 2,
@@ -44,7 +60,15 @@ const ELEMENT_DATA = [
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
     percent: 10,
-    personImg: "person3"
+    personImg: "person3",
+    role: "Sales Lead, Vancouver, CA",
+    email: "willy.j@topopps.com",
+    curriculumCompleted: 1,
+    curriculumTotal: 5,
+    coursesCompleted: 8,
+    coursesTotal: 10,
+    coachingCompleted: 2,
+    coachingTotal: 10
   },
   {
     index: 3,
@@ -59,11 +83,19 @@ const ELEMENT_DATA = [
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
     percent: 50,
-    personImg: "person1"
+    personImg: "person4",
+    role: "Sales Lead, Vancouver, CA",
+    email: "grath.m@topopps.com",
+    curriculumCompleted: 3,
+    curriculumTotal: 5,
+    coursesCompleted: 2,
+    coursesTotal: 10,
+    coachingCompleted: 6,
+    coachingTotal: 10
   },
   {
     index: 4,
-    name: "Ethan Clark",
+    name: "Chrissy Holden",
     forecast: "$1.88 M",
     selfReporting: "$1.0 M",
     mngrReporting: "$3.2 M",
@@ -74,11 +106,19 @@ const ELEMENT_DATA = [
     bestCase: "$2.1 M",
     mostLikely: "$1.3 M",
     percent: 30,
-    personImg: "person3"
+    personImg: "person5",
+    role: "Sales Lead, Vancouver, CA",
+    email: "chrissy.h@topopps.com",
+    curriculumCompleted: 5,
+    curriculumTotal: 5,
+    coursesCompleted: 9,
+    coursesTotal: 10,
+    coachingCompleted: 10,
+    coachingTotal: 10
   },
   {
     index: 5,
-    name: "Jessy Rose",
+    name: "Lynda Williams",
     forecast: "$2.3 M",
     selfReporting: "$2.1 M",
     mngrReporting: "$2.7 M",
@@ -89,11 +129,19 @@ const ELEMENT_DATA = [
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
     percent: 20,
-    personImg: "person2"
+    personImg: "person6",
+    role: "Sales Lead, Vancouver, CA",
+    email: "lynda.m@topopps.com",
+    curriculumCompleted: 5,
+    curriculumTotal: 5,
+    coursesCompleted: 4,
+    coursesTotal: 10,
+    coachingCompleted: 10,
+    coachingTotal: 10
   },
   {
     index: 6,
-    name: "Willy James",
+    name: "Ray Harper",
     forecast: "$2.3 M",
     selfReporting: "$2.1 M",
     mngrReporting: "$2.7 M",
@@ -104,11 +152,19 @@ const ELEMENT_DATA = [
     bestCase: "$1.9 M",
     mostLikely: "$1.3 M",
     percent: 50,
-    personImg: "person1"
+    personImg: "person7",
+    role: "Sales Lead, Vancouver, CA",
+    email: "ray.h@topopps.com",
+    curriculumCompleted: 5,
+    curriculumTotal: 5,
+    coursesCompleted: 10,
+    coursesTotal: 10,
+    coachingCompleted: 10,
+    coachingTotal: 10
   },
   {
     index: 7,
-    name: "Mc Grith",
+    name: "John Morris",
     forecast: "$2.1 M",
     selfReporting: "$1.3 M",
     mngrReporting: "$2.4 M",
@@ -119,7 +175,15 @@ const ELEMENT_DATA = [
     bestCase: "$1.0 M",
     mostLikely: "$1.3 M",
     percent: 10,
-    personImg: "person3"
+    personImg: "person8",
+    role: "Sales Lead, Vancouver, CA",
+    email: "john.m@topopps.com",
+    curriculumCompleted: 5,
+    curriculumTotal: 5,
+    coursesCompleted: 10,
+    coursesTotal: 10,
+    coachingCompleted: 10,
+    coachingTotal: 10
   }
 ];
 
@@ -129,7 +193,9 @@ const ELEMENT_DATA = [
   styleUrls: ["./team-forecast.component.scss"]
 })
 export class TeamForecastComponent implements OnInit {
-  public selectedTimePeriod = "Q1-2019";
+  @Output()
+  public showView = new EventEmitter<any>();
+  public selectedMetric = "coursesCompleted";
   public selectedRowIndex = -1;
   public showPopup = false;
   displayedColumns: string[] = [
@@ -138,8 +204,10 @@ export class TeamForecastComponent implements OnInit {
     "selfReporting",
     "mngrReporting",
     "won",
-    "stagePipeline",
-    "categoryPipeline",
+    "curriculum",
+    "courses",
+    // "stagePipeline",
+    // "categoryPipeline",
     "commit",
     "bestCase",
     "mostLikely"
@@ -149,8 +217,8 @@ export class TeamForecastComponent implements OnInit {
     { key: "selfReporting", label: "SELF REPORTING" },
     { key: "mngrReporting", label: "MNGR REPORTING" },
     { key: "won", label: "WON" },
-    { key: "stagePipeline", label: "STAGE PIPELINE" },
-    { key: "categoryPipeline", label: "CATEGORY PIPELINE" },
+    // { key: "curriculum", label: "CURRICULUM" },
+    // { key: "courses", label: "COURSES" },
     { key: "commit", label: "COMMIT" },
     { key: "bestCase", label: "BEST CASE" },
     { key: "mostLikely", label: "MOST LIKELY" }
@@ -161,12 +229,8 @@ export class TeamForecastComponent implements OnInit {
   ngOnInit() {}
 
   onEdit(data) {
+    this.showView.emit(data);
     this.selectedRowIndex = data.index;
     this.showPopup = true;
-  }
-
-  closePopup() {
-    this.showPopup = false;
-    this.selectedRowIndex = -1;
   }
 }

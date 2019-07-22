@@ -2,24 +2,21 @@
   <div class="teamfc__actions d-flex flex-row">
     <div class="teamfc__actions-select">
       <mat-form-field>
-        <mat-label>TIME PERIOD</mat-label>
-        <mat-select [(value)]="selectedTimePeriod">
-          <mat-option value="Q1-2019">
-            Q1-2019
+        <mat-label>METRICS</mat-label>
+        <mat-select [(value)]="selectedMetric">
+          <mat-option value="coursesCompleted">
+            Courses Completed
           </mat-option>
-          <mat-option value="Q1-2019">
-            Q2-2019
+          <mat-option value="coachingSessionsTaken">
+            Coaching sessions taken
           </mat-option>
-          <mat-option value="Q1-2019">
-            Q3-2019
-          </mat-option>
-          <mat-option value="Q1-2019">
-            Q4-2019
+          <mat-option value="curriculum">
+            Curriculum
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="teamfc__actions-select">
+    <!-- <div class="teamfc__actions-select">
       <mat-form-field>
         <mat-label>LOCATION</mat-label>
         <mat-select [(value)]="selectedTimePeriod">
@@ -75,12 +72,12 @@
       <i class="material-icons">
         more_vert
       </i>
-    </div>
+    </div> -->
   </div>
   <div class="teamfc__data">
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>NAME</th>
+        <th mat-header-cell *matHeaderCellDef>NAME / BS SCORE</th>
         <td mat-cell *matCellDef="let element">
           <div class="d-flex flex-row ">
             <div class="{{element.personImg}}"></div>
@@ -103,6 +100,18 @@
           </div>
         </td>
       </ng-container>
+      <ng-container matColumnDef="curriculum">
+        <th mat-header-cell *matHeaderCellDef>CURRICULUM</th>
+        <td mat-cell *matCellDef="let element">
+          <span class="percent">{{element.curriculumCompleted/element.curriculumTotal * 100}}%</span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="courses">
+        <th mat-header-cell *matHeaderCellDef>COURSES</th>
+        <td mat-cell *matCellDef="let element">
+          <span class="percent">{{element.coursesCompleted/element.coursesTotal * 100}}%</span>
+        </td>
+      </ng-container>
       <ng-container *ngFor="let column of columnInfo" matColumnDef="{{column.key}}">
         <th mat-header-cell *matHeaderCellDef> {{column.label}} </th>
         <td mat-cell *matCellDef="let element"> {{element[column.key]}} </td>
@@ -113,20 +122,4 @@
         [ngClass]="{'row-highlight': selectedRowIndex == row.index}" (click)="onEdit(row)"></tr>
     </table>
   </div>
-</div>
-<div class="fc__row" *ngIf="showPopup">
-  <div class="fc__row-close">
-    <i class="material-icons" (click)="closePopup()">close</i>
-  </div>
-  <div class="fc__row-info">
-    <mat-tab-group style="width: 760px" [selectedIndex]="0" [dynamicHeight]="true">
-      <mat-tab label="PROFILE SUMMARY">
-        <app-profile-summary></app-profile-summary>
-      </mat-tab>
-      <mat-tab label="OPPORTUNITIES">
-        <app-opportunities></app-opportunities>
-      </mat-tab>
-    </mat-tab-group>
-  </div>
-
 </div>
