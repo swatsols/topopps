@@ -1,0 +1,47 @@
+<div class="bystage">
+  <div class="bystage__actions">
+    <div class="bystage__actions-left">
+      <div class="bystage-filter" style="padding-left:0px;">
+        <select>
+          <option selected="true">WON / OPEN OPPS</option>
+        </select>
+        <span>1697 for $55,968,826</span>
+      </div>
+      <div class="bystage-filter" style="width: 300px">
+        <select>
+          <option selected="true">CURRENT PERIOD</option>
+        </select>
+        <div class="current-period">
+          <span>New: 444</span><span>Won: 17</span><span>Lost: 4</span>
+        </div>
+      </div>
+      <div class="bystage-filter">
+        <label>MY QUOTA</label>
+        <span>$8,000,000</span>
+      </div>
+      <div class="bystage-filter" style="border: none;padding-right: 10px;">
+        <label>FORECAST</label>
+        <span style="color: #4A90E2;">$8,175,775</span>
+      </div>
+    </div>
+
+    <div class="bystage__actions-right">
+      <i class="material-icons bystage-actn">
+        search
+      </i>
+      <i class="material-icons bystage-actn">
+        history
+      </i>
+      <i class="material-icons bystage-actn">
+        subject
+      </i>
+      <i class="material-icons bystage-actn"> notifications_none </i>
+    </div>
+  </div>
+
+  <div class="bystage__body flex-grow-1">
+    <app-stage *ngFor="let item of pipelineData; let i = index;" [ngClass]="{'bd-left': i === 0}" [pipelineData]="item">
+    </app-stage>
+  </div>
+
+</div>

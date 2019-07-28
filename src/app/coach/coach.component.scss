@@ -1,0 +1,151 @@
+.coach {
+  height: 100%;
+  overflow-x: hidden;
+
+  .person4 {
+    height: 60px;
+    width: 60px;
+    background-size: 145px;
+    margin-right: 10px;
+    background-position-x: -42px;
+  }
+
+
+  &__bsmetrics {
+    margin-top: 15px;
+    height: 150px;
+    float: left;
+  }
+
+
+  .dial {
+    height: 100px;
+    width: 121px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    float: left;
+    margin: 10px 0px;
+
+    .c100 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__insights {
+    margin-top: 15px;
+
+    .parent-label {
+      width: 100%;
+      //   border-bottom: 1px solid #d4d7dc;
+      height: 30px;
+      margin-bottom: 0px;
+    }
+
+    .title {
+      color: #222222;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .description {
+      color: #777777;
+      font-size: 13px;
+    }
+
+    &-row {
+      border-bottom: 1px dashed #d4d7dc;
+      padding-bottom: 15px;
+      margin-top: 5px;
+    }
+  }
+
+  &__profile {
+    &-icon {
+      font-size: 62px;
+      color: #80808087;
+      margin-right: 5px;
+    }
+  }
+
+  .name {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .role {
+    color: #777777;
+    font-size: 12px;
+  }
+
+  label {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__fcchange {
+    float: left;
+
+
+
+    .tab {
+      border: 1px solid rgba(212, 215, 220, 0.8);
+      border-radius: 3px;
+      background-color: #ffffff;
+      height: 60px;
+      justify-content: center;
+      width: 120px;
+      padding: 20px;
+      margin-right: 10px;
+
+      .title {
+        color: #777777;
+        font-size: 10px;
+      }
+
+      .value {
+        color: #222222;
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+
+.table td,
+.table th {
+  padding: 8px;
+  height: 40px;
+  font-size: 14px;
+}
+
+
+.app-card__tab {
+  height: inherit;
+}
+
+.blue-text,
+.blue_text {
+  color: #548bac !important;
+
+}
+
+.red-text,
+.red_text {
+  color: #e33627 !important;
+}
+
+.label-closed {
+  background-color: #548bac;
+  color: #ffffff;
+  padding: 2px 9px;
+}
+
+.label-danger {
+  background-color: #d9534f;
+  color: #ffffff;
+  padding: 2px 9px;
+}

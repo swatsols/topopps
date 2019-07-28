@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
 
 const ELEMENT_DATA = [
   {
@@ -196,7 +196,15 @@ export class TeamForecastComponent implements OnInit {
   @Output()
   public showView = new EventEmitter<any>();
   public selectedMetric = "coursesCompleted";
+
   public selectedRowIndex = -1;
+
+  @Input("rowIndex")
+  set rowIndex(index) {
+    this.selectedRowIndex = index;
+    console.info(this.selectedRowIndex);
+  }
+
   public showPopup = false;
   displayedColumns: string[] = [
     "name",
@@ -204,8 +212,8 @@ export class TeamForecastComponent implements OnInit {
     "selfReporting",
     "mngrReporting",
     "won",
-    "curriculum",
-    "courses",
+    // "curriculum",
+    // "courses",
     // "stagePipeline",
     // "categoryPipeline",
     "commit",

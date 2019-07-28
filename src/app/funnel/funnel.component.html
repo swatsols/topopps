@@ -1,3 +1,6 @@
-<p>
-  funnel works!
-</p>
+<div class="pipeline">
+  <app-navigation-tab [tabItems]="tabItems" (tabChange)="onTabChange($event)"></app-navigation-tab>
+  <div class="pipeline__body flex-grow-1">
+    <app-bystage *ngIf="selectedTab === 'BY STAGE'"></app-bystage>
+  </div>
+</div>

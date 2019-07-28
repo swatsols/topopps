@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ScrollingModule } from "@angular/cdk/scrolling";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -30,9 +31,11 @@ import {
   MatTableModule,
   MatProgressBarModule
 } from "@angular/material";
-import { ProfileSummaryComponent } from './forecast/forecast-summary/team-forecast/profile-summary/profile-summary.component';
-import { OpportunitiesComponent } from './forecast/forecast-summary/team-forecast/opportunities/opportunities.component';
-import { IntegrationsComponent } from './integrations/integrations.component';
+import { ProfileSummaryComponent } from "./forecast/forecast-summary/team-forecast/profile-summary/profile-summary.component";
+import { OpportunitiesComponent } from "./forecast/forecast-summary/team-forecast/opportunities/opportunities.component";
+import { IntegrationsComponent } from "./integrations/integrations.component";
+import { BystageComponent } from "./funnel/bystage/bystage.component";
+import { StageComponent } from "./funnel/stage/stage.component";
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { IntegrationsComponent } from './integrations/integrations.component';
     TeamForecastComponent,
     ProfileSummaryComponent,
     OpportunitiesComponent,
-    IntegrationsComponent
+    IntegrationsComponent,
+    BystageComponent,
+    StageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +71,8 @@ import { IntegrationsComponent } from './integrations/integrations.component';
     MatIconModule,
     MatInputModule,
     MatTableModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

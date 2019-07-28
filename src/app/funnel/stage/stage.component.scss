@@ -1,0 +1,170 @@
+.stage {
+  height: 100%;
+  width: 380px;
+  border-right: 1px solid #D4D7DC;
+
+  &_title {
+    height: 45px;
+    padding: 16px;
+    box-sizing: content-box;
+    background-color: #ECECEC;
+    border: 1px solid #D4D7DC;
+    border-left: none;
+    border-right: none;
+
+    .title-info {
+      display: flex;
+      flex-direction: column;
+      float: left;
+
+      .title-label {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .deals {
+        color: #777777;
+        font-size: 13px;
+
+        .plusminus {
+          color: #4A90E2;
+          margin-left: 7px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .title-value {
+      float: right;
+      line-height: 45px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &_body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .stage_opportunity {
+      margin: 20px 8px 20px 8px;
+      height: 170px;
+      box-sizing: content-box;
+      border: 1px solid #D4D7DC;
+
+      &-info {
+        padding: 14px 11px;
+        margin-bottom: 10px;
+        height: 100px;
+
+        .rep-name {
+          margin-top: 5px;
+          margin-left: 5px;
+        }
+
+        .show-rep-profile {
+          color: #777777;
+          font-size: 13px;
+        }
+      }
+
+      &-detail {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #D4D7DC;
+        border-right: 1px solid #D4D7DC;
+        height: 61px;
+        margin-right: -1px;
+
+        .opp {
+          display: flex;
+          flex-direction: column;
+          width: 120px;
+          padding-left: 15px;
+          height: 60px;
+          padding-top: 10px;
+          border-right: 1px solid #D4D7DC;
+        }
+
+        .opp-status {
+          .title {
+            color: #777777;
+            font-size: 12px;
+          }
+
+          .value {
+            color: #86C06A;
+            font-size: 14px;
+            font-weight: 500;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+
+        .opp-amount,
+        .opp-close {
+          .title {
+            color: #777777;
+            font-size: 12px;
+          }
+
+          .value {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+
+        .opp-close {
+          width: 122px;
+          margin-right: -1px;
+        }
+
+
+      }
+    }
+  }
+}
+
+.c100 {
+  font-size: 75px;
+  width: 1em;
+  height: 1em;
+}
+
+.c100.orange .bar,
+.c100.orange .fill {
+  border-color: #dd9d22 !important
+}
+
+.c100.green .bar,
+.c100.green .fill {
+  border-color: #9DCA3A !important
+}
+
+
+.c100.blue .bar,
+.c100.blue .fill {
+  border-color: rgb(84, 139, 172) !important;
+}
+
+.blue {
+  color: rgb(84, 139, 172) !important;
+}
+
+.grey {
+  color: rgb(182, 182, 182) !important;
+}
+
+.c100.grey .bar,
+.c100.grey .fill {
+  border-color: rgb(182, 182, 182) !important
+}
+
+.c100>span {
+  width: 4.5em;
+  line-height: 4.5em;
+  font-size: 16px;
+  color: #222222;
+  font-weight: 600;
+}

@@ -1,0 +1,47 @@
+<div class="stage">
+  <div class="stage_title">
+    <div class="title-info">
+      <span class="title-label">{{data.name}}</span>
+      <span class="deals">{{data.data.length}} deals <span class="plusminus">{{data.trend}}</span></span>
+    </div>
+    <div class="title-value">
+      {{data.value}}
+    </div>
+  </div>
+  <div class="stage_body" #oppbody>
+    <div class="stage_opportunity" *ngFor="let item of data.data">
+      <div class="stage_opportunity-info">
+        <div class="c100 green" [ngClass]="{'p100': item.health > 50, 'blue': data.name === 'Closed Won', 
+          'grey': (data.name ==='Qualification' || data.name ==='SAL' || data.name ==='SQL') }">
+          <span>{{item.health}}%</span>
+          <div class="slice">
+            <div class="bar" [ngStyle]="{'transform': 'rotate(' + (item.health / 100) * 360 + 'deg)'}">
+            </div>
+            <div class="fill"></div>
+          </div>
+        </div>
+        <div class="rep-name">
+          <strong style="font-weight: 600;">{{item.title}}</strong>
+          <br>
+          <span class="show-rep-profile">{{item?.salesrep?.name}}</span>
+        </div>
+      </div>
+      <div class="stage_opportunity-detail">
+        <div class="opp opp-status">
+          <span class="title">STATUS</span>
+          <span class="value"
+            [ngClass]="{'p100': item.health > 50, 'blue': data.name === 'Closed Won', 
+              'grey': (data.name ==='Qualification' || data.name ==='SAL' || data.name ==='SQL') }">{{item.forecast_label}}</span>
+        </div>
+        <div class="opp opp-amount">
+          <span class="title">AMOUNT</span>
+          <span class="value">$67.5K</span>
+        </div>
+        <div class="opp opp-close">
+          <span class="title">CLOSE DATE</span>
+          <span class="value">Apr 1, 19</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

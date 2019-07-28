@@ -1,5 +1,6 @@
 <div class="fsum">
-  <mat-tab-group [disableRipple]="true" [dynamicHeight]="true" (selectedTabChange)="tabChanged($event)">
+  <mat-tab-group [selectedIndex]="1" [disableRipple]="true" [dynamicHeight]="true"
+    (selectedTabChange)="tabChanged($event)">
     <mat-tab>
       <ng-template mat-tab-label>
         <span>My Forecast</span>
@@ -10,7 +11,7 @@
       <ng-template mat-tab-label>
         <span>Team Forecast</span>
       </ng-template>
-      <app-team-forecast (showView)="ShowSalesRepView($event)"></app-team-forecast>
+      <app-team-forecast (showView)="ShowSalesRepView($event)" [rowIndex]='rowIndex'></app-team-forecast>
     </mat-tab>
   </mat-tab-group>
   <div class="forecase-info d-flex align-items-center" *ngIf="selectedIndex === 0">
